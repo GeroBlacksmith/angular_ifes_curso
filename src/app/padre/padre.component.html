@@ -1,0 +1,11 @@
+<p>
+  Root Component
+</p>
+
+<div class="imptu-field col s6">
+  <input type="text" id="nombre" [(ngModel)]="nombre" class="validate"> 
+  <label for="nombre">Nombre: </label>
+</div>
+
+<a class="waves-effect waves-light btn" (click)="saludar(nombre)">ver</a>
+<app-hijo [saludoHijo]="saludoPadre" (vaHijo)="saludaAlPadre($event)"></app-hijo>

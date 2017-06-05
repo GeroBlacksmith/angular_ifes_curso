@@ -1,0 +1,43 @@
+ <div class="row">
+   
+        <div class="col s12 m7">
+          
+          <div class="card">
+            
+            <div class="card-image">
+              
+              <img [src]="logoMHG">
+                
+              
+            </div>
+            <div class="card-content">
+              <p> CAPCOM 2015</p>
+            </div>
+            <div class="card-action">
+              <button (click)="newMonster()">See more</button>
+            </div>
+          </div>
+        </div>
+            <div class="col s12 m5">
+          
+          <div class="card">
+            
+            <div class="card-image">
+              
+              
+              
+            </div>
+            <div class="card-content">
+              <p> ACTION RPG - Hunting & Farming</p>
+            </div>
+            <div class="card-action">
+              <a href="#">More Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12">
+          
+        <app-monster-list [list]="lista"> </app-monster-list>
+        </div>
+</div>
+  

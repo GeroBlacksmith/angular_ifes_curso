@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+//import { materialize } from 'materialize-css';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Monster Hunter Fan site!';
+   
+  constructor(){
+    //var logomh4u = '../../img/mh4ulogo.jpg';  
+    
+  }
+  
 }
