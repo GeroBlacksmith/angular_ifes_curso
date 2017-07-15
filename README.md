@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ideas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
@@ -26,3 +27,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# angular_ifes_curso
+Proyecto desarrollado durante el aprendizaje de angular2+ en el instituto IFES
+>>>>>>> 04fd5cfd94d0916f4f6d3b1c511c35fe234048fd
