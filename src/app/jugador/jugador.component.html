@@ -1,0 +1,70 @@
+<form (ngSubmit)="onSubmit(jugadorForm)" #jugadorForm="ngForm">
+    <div class="row">
+        <div class="input-field col s12 m6 offset-m3">
+            <input placeholder="Placeholder" id="id" type="text" class="validate">
+            <label for="id" class="active">ID</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 offset-m3">
+            <input [(ngModel)]="modelo.nombre" #nombre="ngModel" required name="nombre" placeholder="Placeholder" id="nombre" type="text"
+                class="validate">
+            <label for="nombre" class="active">Nombre {{nombre.className}}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 offset-m3">
+            <input [(ngModel)]="modelo.apellido" #apellido="ngModel" name="apellido" required placeholder="Placeholder" id="apellido"
+                type="text" class="validate" #apellido="ngModel">
+            <label for="apellido" class="active">Apellido {{apellido.className}}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 offset-m3">
+            <input  (click)="log();" [(ngModel)]="modelo.edad" name="edad" placeholder="Placeholder" id="edad" type="text" class="validate">
+            <label for="edad" class="active">edad</label>
+        </div>
+    </div>
+    <div class="row">
+
+
+
+        <div class="input-field col s12 m6 offset-m3" (click)="log();">
+
+            <select materialize="material_select" [(ngModel)]="modelo.equipo"  #t name="equipo" >
+                <option selected disabled>Elija equipo</option>
+                 <option *ngFor="let equip of equipos" [selected]="<equip></equip>">{{equip}}</option>
+            </select>
+            <label>Materialize Select</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 m6 offset-m3">
+            <button type="submit" class="btn btn-success" [disabled]="!jugadorForm.form.valid" (click)="agregarJugador(modelo)">Agregar Jugador</button>
+        </div>
+    </div>
+
+
+</form>
+<div class="row">
+
+
+
+    <div class="row">
+
+        <div class="col s12 m3 offset-m3">
+            <div [hidden]="nombre.valid || nombre.pristine" class="red">
+                El nombre es requerido
+            </div>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="col s12 m3 offset-m3">
+            <div [hidden]="apellido.valid || apellido.pristine" class="red">
+                El apellido es requerido
+            </div>
+        </div>
+    </div>
+    <app-detalle-jugador [detalleJugador]="modelo"></app-detalle-jugador>
+</div>

@@ -1,0 +1,33 @@
+<div *ngIf="!nombreCurso; else cursoInfo">
+    <form [formGroup]="miFormulario" (ngSubmit)="agregarCurso(miFormulario.value)">
+        <div class="form-container">
+            <div class="row columns">
+                <h1>Cursos Reactivos</h1>
+                <label>Nombre Curso
+          <input type="text" formControlName="nombreCurso">
+        </label>
+
+                <label>Profesor
+          <textarea  formControlName="profesor"></textarea>
+        </label>
+
+                <label>Descripcion
+          <textarea  formControlName="descripcion"></textarea>
+        </label>
+
+                <input type="submit" class="button expanded" value="Agregar Curso" [disabled]="!miFormulario.valid">
+            </div>
+        </div>
+    </form>
+</div>
+
+<ng-template #cursoInfo>
+    <div class="form-container">
+        <div class="row columns">
+            <h1>{{ nombreCurso }}</h1>
+
+            <p>{{ profesor }}</p>
+            <p>{{ descripcion }}</p>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,24 @@
+<form action="" novalidate [formGroup]="formEquipo">
+    <label for="nombre">Nombre</label>
+    <input type="text" formControlName="nombre" class="validate" id="nombre">
+    
+    <label for="Ciudad">Ciudad</label>
+    <input type="text" formControlName="ciudad" class="validate" id="ciudad">
+    
+    <div formGroupName="jugadores" class="well well-lg">
+        <h4>Jugadores</h4>
+        <div class="input-field col s6">
+            <input id="nombre" type="text" class="validate" formControlName="nombre">
+            <label for="nombre">Nombre</label>
+        </div>
+
+        <div class="input-field col s6">
+            <input id="apellido" type="text" class="validate" formControlName="apellido">
+            <label for="apellido">Apellido</label>
+        </div>
+
+    </div>
+    
+    <p>Form value: {{ formEquipo.value | json }}</p>
+    <p>Form status: {{ formEquipo.status | json }}</p>
+</form>

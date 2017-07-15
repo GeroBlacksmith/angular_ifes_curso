@@ -1,0 +1,12 @@
+<form>
+    <div class="form-field">
+        <label for="nombre">Nombre</label>
+        <input [(ngModel)]="modelo.nombre" type="text" name="nombre" id="nombre">
+    </div>
+    <div class="form-field">
+        <label for="apellido">Apellido</label>
+        <input [(ngModel)]="modelo.apellido" type="text" name="apellido" id="apellido">
+
+    </div>
+    <a (click)="onSubmit(modelo)" class="btn"></a>
+</form>
