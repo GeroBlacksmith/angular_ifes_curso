@@ -47,7 +47,10 @@ import{ListaJugadoresComponent}from'./jugador/lista-jugadores.component'
     EquipoComponent,
     EquipoDetalleComponent,
     FormularioComponent,
-    ListaJugadoresComponent
+    ListaJugadoresComponent,
+    MonhangenComponent,
+    Monhan4uComponent,
+    MonsterListComponent
     //MiDirective,
     //MiLoopDirective,
     //HighlightDirective
